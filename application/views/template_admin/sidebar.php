@@ -194,22 +194,16 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-						<li class="nav-item">
-							<li>
-							<a href="<?= base_url('Admin/tambahpenyakit') ?>">
+						<li class="active"><a href="<?= base_url(); ?>Admin/tambahpenyakit">
 							<i class="far fa-circle nav-icon"></i> 
 							Tambah Data Penyakit
-							</a>
-							</li>
               </li>
     
-		          <li class="nav-item">
-							<li>
-							<a href="<?= base_url('Admin/tambahgejala') ?>">
+		          <li class="active">
+							<a href="<?= base_url(); ?>Admin/tambahgejala">
 							<i class="far fa-circle nav-icon"></i> 
 							Tambah Data Gejala
 							</a>
-							</li>
               </li>
               
             </ul>

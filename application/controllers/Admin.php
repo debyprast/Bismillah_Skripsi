@@ -10,5 +10,17 @@ class Admin extends CI_Controller {
 		$this->load->view('template_admin/footer');
     }
 
-	
+	public function tambahpenyakit(){
+		$this->load->view('template_admin/header');
+		$this->load->view('template_admin/sidebar');
+		$this->load->view('admin/tambahpenyakit');
+		$this->load->view('template_admin/footer');
+    }
+
+	public function tambahgejala(){
+		$this->load->view('template_admin/header');
+		$this->load->view('template_admin/sidebar');
+		$this->load->view('admin/tambahgejala');
+		$this->load->view('template_admin/footer');
+    }
 }
