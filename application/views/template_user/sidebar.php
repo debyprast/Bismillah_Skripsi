@@ -186,7 +186,7 @@
                with font-awesome or any other icon font library -->
      
           <li class="nav-item">
-            <a href="#" class="nav-link">
+					<li class="active"><a href="<?= base_url(); ?>User/listpenyakit" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
                 Cek Penyakit
@@ -205,21 +205,21 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/tables/simple.html" class="nav-link">
+							<li class="active"><a href="<?= base_url(); ?>User/hasilarwana">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Hasil Analisa Ikan Arwana</p>
+                  Hasil Analisa Ikan Arwana
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/tables/data.html" class="nav-link">
+							<li class="active"><a href="<?= base_url(); ?>User/hasilcupang">
                   <i class="far fa-circle nav-icon"></i>
-                  <p> Hasil Analisa Ikan Cupang</p>
+                   Hasil Analisa Ikan Cupang
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/tables/jsgrid.html" class="nav-link">
+							<li class="active"><a href="<?= base_url(); ?>User/hasilkoi">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Hasil Analisa Ikan Koi</p>
+                  Hasil Analisa Ikan Koi
                 </a>
               </li>
             </ul>
