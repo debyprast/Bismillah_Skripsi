@@ -207,19 +207,19 @@
               <li class="nav-item">
                 <a href="pages/tables/simple.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Data Ikan</p>
+                  <p>Hasil Analisa Ikan Arwana</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="pages/tables/data.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Data Penyakit</p>
+                  <p> Hasil Analisa Ikan Cupang</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="pages/tables/jsgrid.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Data gejala</p>
+                  <p>Hasil Analisa Ikan Koi</p>
                 </a>
               </li>
             </ul>
