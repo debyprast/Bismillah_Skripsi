@@ -3,6 +3,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 
+	function __construct()
+    {
+        parent::__construct();
+        $this->load->helper(array('form', 'url'));
+        $this->load->library('form_validation');
+
+        // if (!$this->session->userdata('email')) {
+		// 	redirect(base_url('Auth/loginadmin'));
+		// }else{
+            
+        // }
+    }
+
 	public function index(){
 		$this->load->view('template_admin/header');
 		$this->load->view('template_admin/sidebar');
@@ -13,14 +26,14 @@ class Admin extends CI_Controller {
 	public function tambahpenyakit(){
 		$this->load->view('template_admin/header');
 		$this->load->view('template_admin/sidebar');
-		$this->load->view('admin/tambahpenyakit');
+		$this->load->view('admin/tambah_penyakit');
 		$this->load->view('template_admin/footer');
     }
 
 	public function tambahgejala(){
 		$this->load->view('template_admin/header');
 		$this->load->view('template_admin/sidebar');
-		$this->load->view('admin/tambahgejala');
+		$this->load->view('admin/tambah_gejala');
 		$this->load->view('template_admin/footer');
     }
 }
