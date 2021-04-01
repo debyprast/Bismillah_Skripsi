@@ -237,6 +237,15 @@
               </li>
             </ul>
           </li>
+
+					<li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Logout
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
          
     <!-- /.sidebar -->
   </aside>
