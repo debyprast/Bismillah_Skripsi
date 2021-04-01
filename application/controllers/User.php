@@ -16,6 +16,13 @@ class User extends CI_Controller {
         // }
     }
 
+	public function index(){
+		$this->load->view('template_user/header');
+		$this->load->view('template_user/sidebar');
+		$this->load->view('user/index');
+		$this->load->view('template_user/footer');
+    }
+
 	public function listpenyakit(){
 		$this->load->view('template_user/header');
 		$this->load->view('template_user/sidebar');
