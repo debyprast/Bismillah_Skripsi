@@ -226,7 +226,7 @@
           </li>
 
 					<li class="nav-item">
-            <a href="#" class="nav-link">
+					<li class="active"><a href="<?= base_url(); ?>Login/login" class="nav-link">
               <i class="far fa-plane nav-icon"></i>
               <p>
                 Logout

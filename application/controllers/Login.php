@@ -17,10 +17,7 @@ class Login extends CI_Controller {
     }
 
 	public function login(){
-		$this->load->view('template_admin/header');
-		$this->load->view('template_admin/sidebar');
 		$this->load->view('login/masuk');
-		$this->load->view('template_admin/footer');
     }
 
 	

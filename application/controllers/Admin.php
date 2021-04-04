@@ -43,4 +43,32 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/tambah_gejala');
 		$this->load->view('template_admin/footer');
     }
+
+	public function dataikan(){
+		$this->load->view('template_admin/header');
+		$this->load->view('template_admin/sidebar');
+		$this->load->view('admin/data_ikan');
+		$this->load->view('template_admin/footer');
+    }
+
+	public function datapenyakit(){
+		$this->load->view('template_admin/header');
+		$this->load->view('template_admin/sidebar');
+		$this->load->view('admin/data_penyakit');
+		$this->load->view('template_admin/footer');
+    }
+
+	public function datagejala(){
+		$this->load->view('template_admin/header');
+		$this->load->view('template_admin/sidebar');
+		$this->load->view('admin/data_gejala');
+		$this->load->view('template_admin/footer');
+    }
+
+	public function datagejalapenyakit(){
+		$this->load->view('template_admin/header');
+		$this->load->view('template_admin/sidebar');
+		$this->load->view('admin/data_gejalapenyakit');
+		$this->load->view('template_admin/footer');
+    }
 }
