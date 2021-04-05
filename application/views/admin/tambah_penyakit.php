@@ -1,14 +1,22 @@
-<div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">Tambah Ikan</h3>
-              </div>
-              <!-- /.card-header -->
-              <!-- form start -->
+
+<section class="content">
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-primary">
+                <div class="card-header with-border">
+                    <h3 class="card-title">Tambah Penyakit Ikan</h3>
+                </div>
               <form>
                 <div class="card-body">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Id</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Id ikan">
+								<div class="form-group">
+                        <label>Pilih jenis ikan</label>
+                        <select class="form-control">
+                          <option>Arwana</option>
+                          <option>Cupang</option>
+                          <option>Koi</option>
+                        </select>
                   </div>
 									<div class="form-group">
                     <label for="exampleInputEmail1">Nama penyakit</label>
@@ -21,4 +29,27 @@
                   <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
               </form>
+							</div>
+							</div>
+
+							<div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-primary">
+                <div class="card-header with-border">
+                    <h3 class="card-title">List Data Penyakit</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <tr>
+                            <th style="width: 10px">No</th>
+                            <th>Nama ikan</th>
+                            <th>Nama penyakit</th>
+                        </tr>
+                    </table>
+                </div>
             </div>
+        </div>
+    </div>
+

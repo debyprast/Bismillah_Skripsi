@@ -6,10 +6,6 @@
               <!-- form start -->
               <form>
                 <div class="card-body">
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Id</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Id ikan">
-                  </div>
 									<div class="form-group">
                     <label for="exampleInputEmail1">Jenis ikan</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Jenis ikan">

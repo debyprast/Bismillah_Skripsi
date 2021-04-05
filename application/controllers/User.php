@@ -30,6 +30,13 @@ class User extends CI_Controller {
 		$this->load->view('template_user/footer');
     }
 
+	public function listikan(){
+		$this->load->view('template_user/header');
+		$this->load->view('template_user/sidebar');
+		$this->load->view('user/list_ikan');
+		$this->load->view('template_user/footer');
+    }
+
 	public function hasilarwana(){
 		$this->load->view('template_user/header');
 		$this->load->view('template_user/sidebar');
