@@ -6,34 +6,17 @@
               <div class="card-body">
                 <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
 								<div class="row"><div class="col-sm-12 col-md-6"><div class="dt-buttons btn-group flex-wrap">               
-								 <button class="btn btn-secondary buttons-csv buttons-html5" tabindex="0" aria-controls="example1" type="button"><span>CSV</span>
-								 <a href="<?= base_url(); ?>Admin/datapenyakit" class="btn btn-success"> <i class="fa fa download"> </i>Import CSV</a>
 								 
-			<!-- Button trigger modal -->
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-									Launch demo modal
-								</button>
+								 <a href="<?= base_url(); ?>Admin/tambahpenyakit" type="button" class="btn btn-success">
+								<i class="fa fa download"> </i>Tambah Data
+								</a>
+								
+							<!-- Button trigger modal -->
+								<a  type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+								<i class="fa fa download"> </i>Import CSV
+								</a>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-				 </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>								 
+								 
 								 </div> 
 								 </div>
 								 </div>
@@ -70,3 +53,24 @@
               <!-- /.card-body -->
             </div>
 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+				 </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
