@@ -10,7 +10,7 @@
 								 <a href="<?= base_url(); ?>Admin/tambahpenyakit" type="button" class="btn btn-success">
 								<i class="fa fa download"> </i>Tambah Data
 								</a>
-								
+
 							<!-- Button trigger modal -->
 								<a  type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
 								<i class="fa fa download"> </i>Import CSV
@@ -59,18 +59,27 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+        <h5 class="modal-title" id="exampleModalLabel">Form Upload CSV</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 				<span aria-hidden="true">&times;</span>
 				 </button>
       </div>
+			<form method="post" action="<?=site_url($url. 'Admin/importcsv')?>" enctype="multipart/form-data">
       <div class="modal-body">
-        ...
+        <div class="form-group">
+					<label>File CSV</label>
+					<div class="row">
+					<div class="col-md-12">
+					<?=input_file('csv','')?>
+					</div>
+					</div>
+					</div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="submit" name="simpan" class="btn btn-info"><i class="fa fa-save"></i>Simpan</button>
+				<button type="button"  class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
+			</form>
     </div>
   </div>
 </div>
