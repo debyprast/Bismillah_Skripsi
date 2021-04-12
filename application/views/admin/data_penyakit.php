@@ -64,17 +64,10 @@
 				<span aria-hidden="true">&times;</span>
 				 </button>
       </div>
-			<form method="post" action="<?=site_url($url. 'Admin/importcsv')?>" enctype="multipart/form-data">
-      <div class="modal-body">
-        <div class="form-group">
-					<label>File CSV</label>
-					<div class="row">
-					<div class="col-md-12">
-					<?=input_file('csv','')?>
-					</div>
-					</div>
-					</div>
-      </div>
+			<div class="form-group">
+				<label for="foto">Foto *max size 1MB</label>
+				<input type="file" class="form-control" name="foto">
+		</div>
       <div class="modal-footer">
         <button type="submit" name="simpan" class="btn btn-info"><i class="fa fa-save"></i>Simpan</button>
 				<button type="button"  class="btn btn-secondary" data-dismiss="modal">Close</button>
