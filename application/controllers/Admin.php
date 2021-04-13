@@ -65,13 +65,6 @@ class Admin extends CI_Controller {
 		$this->load->view('template_admin/footer');
     }
 
-	public function importcsv(){
-		$this->load->view('template_admin/header');
-		$this->load->view('template_admin/sidebar');
-		$this->load->view('admin/data_penyakit');
-		$this->load->view('template_admin/footer');
-    }
-
 	public function datagejalapenyakit(){
 		$this->load->view('template_admin/header');
 		$this->load->view('template_admin/sidebar');

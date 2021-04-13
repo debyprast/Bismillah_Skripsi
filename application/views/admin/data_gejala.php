@@ -5,16 +5,22 @@
               <!-- /.card-header -->
               <div class="card-body">
                 <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
-								 <div class="row">
-								  <div class="col-sm-12 col-md-6">             
+								<div class="row"><div class="col-sm-12 col-md-6"><div class="dt-buttons btn-group flex-wrap">               
+								 
+								 <a href="<?= base_url(); ?>Admin/tambahpenyakit" type="button" class="btn btn-success">
+								<i class="fa fa download"> </i>Tambah Data
+								</a>
+
+							<!-- Button trigger modal -->
+								<a  type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+								<i class="fa fa download"> </i>Import CSV
+								</a>
+
+								 
 								 </div> 
-								</div>
-							 </div>
-								 <div class="col-sm-12 col-md-6">
-								  <div id="example1_filter" class="dataTables_filter">
-								   <label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="example1"></label>
-								  </div>
 								 </div>
+								 </div>
+								 <div class="col-sm-12 col-md-6"><div id="example1_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="example1"></label></div></div></div>
 								</div>
 								 <div class="row">
 								 <div class="col-sm-12">
@@ -29,16 +35,16 @@
                   <tr class="odd">
                     <td class="dtr-control sorting_1" tabindex="0">1</td>
                     <td>19</td>
-                    <td>Nafsu makan berkurang</td>
+                    <td>Drop Eye</td>
                   </tr><tr class="even">
                     <td class="dtr-control sorting_1" tabindex="0">2</td>
                     <td>24</td>
-                    <td>Sirip menguncup</td>
+                    <td>Jamur</td>
                      
                   </tr><tr class="odd">
                     <td class="dtr-control sorting_1" tabindex="0">3</td>
                     <td>55</td>
-                    <td>Warna memudar</td>
+                    <td>Perut Buncit</td>
                      
 										 </tbody>
                   
@@ -46,3 +52,29 @@
               </div>
               <!-- /.card-body -->
             </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Form Upload CSV</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+				 </button>
+      </div>
+			<div class="form-group">
+				<label for="foto">Foto *max size 1MB</label>
+				<input type="file" class="form-control" name="foto">
+		</div>
+      <div class="modal-footer">
+        <button type="submit" name="simpan" class="btn btn-info"><i class="fa fa-save"></i>Simpan</button>
+				<button type="button"  class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+			</form>
+    </div>
+  </div>
+</div>
+
+
