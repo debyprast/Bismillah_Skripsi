@@ -4,13 +4,13 @@ require_once APPPATH . 'third_party/Spout/Autoloader/autoload.php';
 
 use Box\Spout\Reader\Common\Creator\ReaderEntityFactory;
 
-class Importikan extends CI_Controller
+class Importpenyakit extends CI_Controller
 {
 
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('Barang_model');
+        $this->load->model('Penyakit_model');
     }
 
 
@@ -18,17 +18,17 @@ class Importikan extends CI_Controller
     public function index()
     {
 		$data['title'] = 'Export Import';
-		$data['semuabarang'] = $this->Barang_model->getDataBarang();
+		$data['penyakit1'] = $this->Penyakit_model->getDataPenyakit();
         
 		$this->load->view('template_admin/header');
 		$this->load->view('template_admin/sidebar');
-		$this->load->view('admin/data_ikan', $data);
+		$this->load->view('admin/data_penyakit', $data);
 		$this->load->view('template_admin/footer');
     }
 
 	public function uploaddata()
     {
-		
+		$this->load->view('data_penyakit');
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'xlsx|xls';
         $config['file_name'] = 'doc' . time();
@@ -42,20 +42,20 @@ class Importikan extends CI_Controller
                 $numRow = 1;
                 foreach ($sheet->getRowIterator() as $row) {
                     if ($numRow > 1) {
-                        $databarang = array(
-                            'ikan'  => $row->getCellAtIndex(1),
-                            'penyakit'  => $row->getCellAtIndex(2),
+                        $datapenyakit = array(
+                            'ikanp'  => $row->getCellAtIndex(1),
+                            'penyakitp'  => $row->getCellAtIndex(2),
                             'date_created' => time(),
                             'date_modified' => time(),
                         );
-                        $this->Barang_model->import_data($databarang);
+                        $this->Penyakit_model->import_data($datapenyakit);
                     }
                     $numRow++;
                 }
 				$reader->close();
                 unlink('uploads/' . $file['file_name']);
                 $this->session->set_flashdata('pesan', 'import Data Berhasil');
-                redirect('importikan');
+                redirect('importpenyakit');
             }
         } else {
             echo "Error :" . $this->upload->display_errors();
