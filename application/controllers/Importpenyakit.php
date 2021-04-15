@@ -18,7 +18,7 @@ class Importpenyakit extends CI_Controller
     public function index()
     {
 		$data['title'] = 'Export Import';
-		$data['penyakit1'] = $this->Penyakit_model->getDataPenyakit();
+		$data['datapenyakit'] = $this->Penyakit_model->getDataPenyakit();
         
 		$this->load->view('template_admin/header');
 		$this->load->view('template_admin/sidebar');
@@ -28,7 +28,6 @@ class Importpenyakit extends CI_Controller
 
 	public function uploaddata()
     {
-		$this->load->view('data_penyakit');
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'xlsx|xls';
         $config['file_name'] = 'doc' . time();

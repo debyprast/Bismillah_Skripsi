@@ -3,7 +3,7 @@
 			<div class="col-12">
 				<div class="card">
 					<div class="card-body">
-						<?= form_open_multipart('Importikan/uploaddata')?>
+						<?= form_open_multipart('Importgejala/uploaddata')?>
 							<div class="form-row">
 								<div class="col-4">
 								<input type="file" class="form-control-file" id="importexcel" name="importexcel" accept=".xls, .xlsx">
@@ -31,12 +31,12 @@
                                 </tr>
 																<tbody>
                                 <?php $i = 1;
-                                foreach ($semuabarang as $barang) : ?>
+                                foreach ($datagejala as $gejala) : ?>
                                     <tr>
                                         <td><?= $i++; ?></td>
-                                        <td><?= $barang['ikan']; ?></td>
-                                        <td><?= $barang['penyakit']; ?></td>
-                                        <td><?= date('d F Y', $barang['date_created']);  ?></td>
+                                        <td><?= $gejala['ikan']; ?></td>
+                                        <td><?= $gejala['penyakit']; ?></td>
+                                        <td><?= date('d F Y', $gejala['date_created']);  ?></td>
                                         </tr> <?php endforeach; ?> </tbody>
 			</div>
 		</div>

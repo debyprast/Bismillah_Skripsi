@@ -4,13 +4,13 @@ require_once APPPATH . 'third_party/Spout/Autoloader/autoload.php';
 
 use Box\Spout\Reader\Common\Creator\ReaderEntityFactory;
 
-class Importikan extends CI_Controller
+class Importgejala extends CI_Controller
 {
 
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('Barang_model');
+        $this->load->model('Gejala_model');
     }
 
 
@@ -18,7 +18,7 @@ class Importikan extends CI_Controller
     public function index()
     {
 		$data['title'] = 'Export Import';
-		$data['semuabarang'] = $this->Barang_model->getDataBarang();
+		$data['datagejala'] = $this->Gejala_model->getDataGejala();
         
 		$this->load->view('template_admin/header');
 		$this->load->view('template_admin/sidebar');
@@ -42,20 +42,20 @@ class Importikan extends CI_Controller
                 $numRow = 1;
                 foreach ($sheet->getRowIterator() as $row) {
                     if ($numRow > 1) {
-                        $databarang = array(
+                        $datagejala = array(
                             'ikan'  => $row->getCellAtIndex(1),
                             'penyakit'  => $row->getCellAtIndex(2),
                             'date_created' => time(),
                             'date_modified' => time(),
                         );
-                        $this->Barang_model->import_data($databarang);
+                        $this->Gejala_model->import_data($datagejala);
                     }
                     $numRow++;
                 }
 				$reader->close();
                 unlink('uploads/' . $file['file_name']);
                 $this->session->set_flashdata('pesan', 'import Data Berhasil');
-                redirect('importikan');
+                redirect('importgejala');
             }
         } else {
             echo "Error :" . $this->upload->display_errors();
