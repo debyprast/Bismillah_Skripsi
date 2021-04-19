@@ -32,9 +32,10 @@ class Admin extends CI_Controller {
     }
 
 	public function tambahpenyakit(){
+		$data['datapenyakit'] = $this->Penyakit_model->getDataPenyakit();
 		$this->load->view('template_admin/header');
 		$this->load->view('template_admin/sidebar');
-		$this->load->view('admin/tambah_penyakit');
+		$this->load->view('admin/tambah_penyakit', $data);
 		$this->load->view('template_admin/footer');
     }
 

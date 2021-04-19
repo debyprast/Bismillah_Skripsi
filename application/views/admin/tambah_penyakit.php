@@ -42,11 +42,17 @@
                 <!-- form start -->
                 <div class="card-body">
                     <table class="table table-hover">
-                        <tr>
-                            <th style="width: 10px">No</th>
-                            <th>Nama ikan</th>
-                            <th>Nama penyakit</th>
-                        </tr>
+										<tbody>
+														<?php $i = 1;
+														foreach ($datapenyakit as $barang) : ?>
+																<tr>
+																		<td><?= $i++; ?></td>
+																		<td><?= $barang['ikanp']; ?></td>
+																		<td><?= $barang['penyakitp']; ?></td>
+																		<td><?= date('d F Y', $barang['date_created']);  ?></td>
+																</tr> 
+														<?php endforeach; ?> 
+												</tbody>
                     </table>
                 </div>
             </div>

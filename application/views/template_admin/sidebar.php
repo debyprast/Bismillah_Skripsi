@@ -189,17 +189,17 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
-                Forms
+                Tambah Data
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
-						<li class="active">
+						<!-- <li class="active">
 							<a href="<?= base_url(); ?>Admin/tambahikan">
 							<i class="far fa-circle nav-icon"></i> 
 							Tambah Data Ikan
 							</a>
-            </li>
+            </li> -->
 
 						<li class="active"><a href="<?= base_url(); ?>Admin/tambahpenyakit">
 							<i class="far fa-circle nav-icon"></i> 
@@ -217,17 +217,17 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
               <p>
-                Tables
+                Table Data
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
+              <!-- <li class="nav-item">
 							<li class="active"><a href="<?= base_url(); ?>Admin/dataikan" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Data Ikan</p>
                 </a>
-              </li>
+              </li> -->
               <li class="nav-item">
 							<li class="active"><a href="<?= base_url(); ?>Admin/datapenyakit" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
