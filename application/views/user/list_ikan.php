@@ -9,9 +9,10 @@
 								<div class="form-group">
                         <label>Pilih ikan</label>
                         <select class="form-control">
-                          <option>Arwana</option>
-                          <option>Cupang</option>
-                          <option>Koi</option>
+                          <?php foreach ($dataikan as $key):?>
+													<option value ="<?php echo $key->idikan?>">
+													<?php echo $key->ikan?></option>
+													<?php endforeach?>
                         </select>
                   </div>
                 </div>
@@ -21,4 +22,4 @@
 				<a href="<?= base_url(); ?>User/listpenyakit" button type="submit" class="btn btn-primary">Submit</button>
                 </div>
               </form>
-            </div>
+							</div>
