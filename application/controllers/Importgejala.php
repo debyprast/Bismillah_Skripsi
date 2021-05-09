@@ -45,6 +45,7 @@ class Importgejala extends CI_Controller
                         $datagejala = array(
                             'ikan'  => $row->getCellAtIndex(1),
                             'penyakit'  => $row->getCellAtIndex(2),
+							'ikan_id'  => $row->getCellAtIndex(3),
                             'date_created' => time(),
                             'date_modified' => time(),
                         );

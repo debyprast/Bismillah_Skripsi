@@ -1,25 +1,31 @@
-<div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">Pilih Jenis Ikan</h3>
-              </div>
-              <!-- /.card-header -->
-              <!-- form start -->
-              <form>
-                <div class="card-body">
-								<div class="form-group">
-                        <label>Pilih ikan</label>
-                        <select class="form-control">
-                          <?php foreach ($dataikan as $key):?>
-													<option value ="<?php echo $key->idikan?>">
-													<?php echo $key->ikan?></option>
-													<?php endforeach?>
-                        </select>
-                  </div>
-                </div>
-                <!-- /.card-body -->
-
-                <div class="card-footer">
-				<a href="<?= base_url(); ?>User/listpenyakit" button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-              </form>
-							</div>
+<div class="container">
+  <div class="row">
+   <div class="col-md-3">
+    <form action="" id="FormLaporan">
+     <select name="" id="dataikan" class="form-control">
+      <option value="0">Show All</option>
+      <?php foreach ($dataikan as $row): ?>
+       <option value="<?php echo $row->idikan ?>"><?php echo $row->ikan ?></option>
+      <?php endforeach ?>
+     </select>
+     <br>
+     <button type="submit" class="btn btn-primary">Show Data</button>
+    </form>
+   </div>
+   <div class="col-md-9">
+    <div id="tampil"></div>
+   </div>
+  </div>
+ </div>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+  $(document).ready(function() {
+   $("#FormLaporan").submit(function(e) {
+    e.preventDefault();
+    var id = $("#test").val();
+    // console.log(id);
+    var url = "<?= site_url('Filter/filter/') ?>" + id;
+    $('#tampil').load(url);
+   })
+  });
+ </script>

@@ -14,6 +14,8 @@ class Ikan_model extends CI_Model
     {
 		$query = $this->db->query("SELECT * FROM gejala ORDER BY ikan ASC");
 		return $query->result();
-	
+
 	}
+
+	
 }
