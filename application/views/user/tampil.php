@@ -1,12 +1,9 @@
-
- <div class="form-group">
-											<?php $i = 1; foreach ($test as $key){?>
+<?php $i = 1; foreach ($test as $row):?>
 												<div class="custom-control custom-checkbox">
 													<td>
-													<input type="checkbox" name="ikan[]" value="<?php echo $key->penyakit;?>">
+													<input type="checkbox"  value="<?php echo $row->penyakit;?>">
 													</td>
-													<td><?php echo $key->penyakit; ?></td>
+													<td><?php echo $row->penyakit; ?></td>
 													</label>
                         </div>
-											<?php $i++; }?>
-                  </div>
+											<?php endforeach ?>

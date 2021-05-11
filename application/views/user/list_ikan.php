@@ -22,7 +22,7 @@
   $(document).ready(function() {
    $("#FormLaporan").submit(function(e) {
     e.preventDefault();
-    var id = $("#test").val();
+    var id = $("#dataikan").val();
     // console.log(id);
     var url = "<?= site_url('Filter/filter/') ?>" + id;
     $('#tampil').load(url);
