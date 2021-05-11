@@ -1,4 +1,8 @@
-<div class="container">
+<div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Pilih ikan yang akan di analisa</h3>
+              </div>
+							<div class="container">
   <div class="row">
    <div class="col-md-3">
     <form action="" id="FormLaporan">
@@ -16,6 +20,7 @@
 <div id="tampil"></div>
    </div>
   </div>
+ </div>
  </div>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>

@@ -185,7 +185,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
      
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
@@ -194,14 +194,14 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-						<!-- <li class="active">
+					 <li class="active">
 							<a href="<?= base_url(); ?>Admin/tambahikan">
 							<i class="far fa-circle nav-icon"></i> 
 							Tambah Data Ikan
 							</a>
             </li> -->
 
-						<li class="active"><a href="<?= base_url(); ?>Admin/tambahpenyakit">
+						<!-- <li class="active"><a href="<?= base_url(); ?>Admin/tambahpenyakit">
 							<i class="far fa-circle nav-icon"></i> 
 							Tambah Data Penyakit
               </li>
@@ -211,7 +211,7 @@
 							Tambah Data Gejala
               </li>
             </ul>
-          </li>
+          </li> --> 
 
           <li class="nav-item">
             <a href="#" class="nav-link">

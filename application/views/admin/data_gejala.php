@@ -3,6 +3,11 @@
 			<div class="col-12">
 				<div class="card">
 					<div class="card-body">
+					<div class="col">
+							<form method="post"  action="<?php  echo base_url(). "admin/tambahgejala"; ?>">
+								<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Gejala</button>
+							</form>
+						</div>
 						<?= form_open_multipart('Importgejala/uploaddata')?>
 							<div class="form-row">
 								<div class="col-4">
@@ -31,16 +36,24 @@
                                     <th scope="col">Tanggal Input </th>
                                     <th scope="col">Aksi</th>
                                 </tr>
-																<tbody>
+							</thead>
                                 <?php $i = 1;
                                 foreach ($datagejala as $gejala) : ?>
                                     <tr>
                                         <td><?= $i++; ?></td>
                                         <td><?= $gejala['ikan']; ?></td>
                                         <td><?= $gejala['penyakit']; ?></td>
-										<td><?= $gejala['ikan_id']; ?></td>
+										<td><?= $gejala['idikan']; ?></td>
                                         <td><?= date('d F Y', $gejala['date_created']);  ?></td>
-                                        </tr> <?php endforeach; ?> </tbody>
+										<td>
+										<button class="btn btn-primary margin" type="button">Edit</button>
+										<button class="btn btn-danger margin" type="button"><span class="fa fa-trash"></span> </button>
+										</td>
+                                    </tr> 
+								<?php endforeach; ?> 
+						</tbody>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
