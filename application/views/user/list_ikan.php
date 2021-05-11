@@ -12,20 +12,20 @@
      <button type="submit" class="btn btn-primary">Show Data</button>
     </form>
    </div>
-   <div class="col-md-9">
-    <div id="tampil"></div>
+  <div class="col-md-9">
+<div id="tampil"></div>
    </div>
   </div>
  </div>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
-  $(document).ready(function() {
-   $("#FormLaporan").submit(function(e) {
-    e.preventDefault();
-    var id = $("#dataikan").val();
-    // console.log(id);
-    var url = "<?= site_url('Filter/filter/') ?>" + id;
-    $('#tampil').load(url);
-   })
-  });
- </script>
+		$(document).ready(function() {
+		$("#FormLaporan").submit(function(e) {
+			e.preventDefault();
+			var id = $("#dataikan").val();
+			// console.log(id);
+			var url = "<?= site_url('Filter/filter/') ?>" + id;
+			$('#tampil').load(url);
+		})
+		});
+	</script>
