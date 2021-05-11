@@ -18,6 +18,14 @@
                     <label for="exampleInputPassword1">Gejala</label>
                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Gejala">
                   </div>
+									<div class="form-group">
+                        <label>ID Ikan</label>
+                        <select class="form-control">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                        </select>
+                  </div>
                 </div>
                 <!-- /.card-body -->
 
