@@ -10,6 +10,10 @@ class User extends CI_Controller {
         $this->load->library('form_validation');
 		$this->load->model('Ikan_model');
 		$this->load->model('Ikan_model');
+		if (!($this->session->userdata('username'))) {
+            redirect(base_url('loginuser'));
+            // redirect($this->index());
+        }
     }
 
 	public function index(){

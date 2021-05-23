@@ -7,14 +7,14 @@ class Admin extends CI_Controller {
     {
         parent::__construct();
         $this->load->helper(array('form', 'url'));
-        $this->load->library('form_validation');
-		$this->load->model('Penyakit_model');
+        $this->load->model('Penyakit_model');
 		$this->load->model('Gejala_model');
-        // if (!$this->session->userdata('email')) {
-		// 	redirect(base_url('Auth/loginadmin'));
-		// }else{
-            
-        // }
+		$this->load->library('form_validation');
+		
+        if (!($this->session->userdata('username'))) {
+            redirect(base_url('loginadmin'));
+            // redirect($this->index());
+        }
     }
 
 	public function index(){
@@ -49,7 +49,7 @@ class Admin extends CI_Controller {
 	public function dataikan(){
 		$this->load->view('template_admin/header');
 		$this->load->view('template_admin/sidebar');
-		$this->load->view('admin/data_ikan', $data);
+		$this->load->view('admin/data_ikan');
 		$this->load->view('template_admin/footer');
     }
 
