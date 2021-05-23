@@ -79,7 +79,7 @@ class Auth extends CI_Controller
 		if ($this->form_validation->run() == FALSE) {
 			$this->user();
 		} else {
-			$username		=	$this->input->post('username');
+			$username	=	$this->input->post('username');
 			$password	=	$this->input->post('password');
 			$where 		=	"username";
 			$cek		= 	$this->login_model->cek_login($this->_user, $where, $username, $password);

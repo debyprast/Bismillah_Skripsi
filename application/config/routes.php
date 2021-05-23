@@ -56,22 +56,17 @@ $route['default_controller'] = 'admin';
 =======
 // $route['namaroute'] = 'NAMAFOLDER/NAMACONTROLLER/NAMAMETHOD */
 // URL ACCESS LOGIN ======================================================
-$route['login']         =   'auth/siswa'; // ACCESS URL LOGIN SISWA AS DEFAULT
-$route['loginuser']    =   'auth/siswa'; // 
+$route['login']         =   'auth/user'; // ACCESS URL LOGIN SISWA AS DEFAULT
+$route['loginuser']    =   'auth/user'; // 
 $route['loginadmin']    =   'auth/admin'; // ACCESS URL LOGIN ADMIN
 // =======================================================================
 
 // URL LOGOUT
 $route['logout']                =   'auth/logout';
 
-// URL PENGUMUMAN  
-
-$route['pengumuman/(:any)']     =   'home/pengumuman_detail/$1';
-$route['pengumuman']            =   'home/pengumuman';
-
 // ========== FORM ACTION LOGIN =======================
 $route['authorization'] =   'auth/login_admin';
-$route['authsiswa']     =   'auth/login_siswa';
+$route['authuser']     =   'auth/login_user';
 $route['authguru']      =   'auth/login_guru';
 //=====================================================
 

@@ -16,12 +16,12 @@
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
+      <!-- <li class="nav-item d-none d-sm-inline-block">
         <a href="<?= base_url(); ?>Admin/index" class="nav-link">Admin</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="<?= base_url(); ?>User/index" class="nav-link">User</a>
-      </li>
+      </li> -->
     </ul>
 
     <!-- Right navbar links -->
@@ -223,16 +223,14 @@
                 </a>
               </li>
             </ul>
-          </li>
-
+            </li>
+					</li>
+					</li>
 					<li class="nav-item">
-					<li class="active"><a href="<?= base_url(); ?>Login/login" class="nav-link">
-              <i class="far fa-plane nav-icon"></i>
-              <p>
-                Logout
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
+					<li class="nav-link"><a href="<?= base_url('logout'); ?>"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
+					</li>
+
+					</li>
          
     <!-- /.sidebar -->
   </aside>
