@@ -28,8 +28,8 @@
                                         <hr>
                                     </form>
                                     <div class="text-center">
-                                        <a class="small" href="<?= base_url('loginguru') ?>" style="text-decoration:none;"><i class="fas fa-user fa-fw"></i> Login Guru</a> | 
-                                        <a class="small" href="<?= base_url() ?>" style="text-decoration:none;"><i class="fas fa-home fa-fw"></i> Dashboard</a>
+                                        <a class="small" href="<?= base_url('loginadmin') ?>" style="text-decoration:none;"><i class="fas fa-user fa-fw"></i> Login Admin</a> | 
+                                        <a class="small" href="<?= base_url('register') ?>" style="text-decoration:none;"><i class="fas fa-home fa-fw"></i>Register</a>
                                     </div>
                                 </div>
                             </div>

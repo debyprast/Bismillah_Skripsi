@@ -45,6 +45,34 @@ class Auth extends CI_Controller
 		}
 	}
 
+	public function register(){
+		$this->load->view('auth/header');
+		$this->load->view('auth/register');
+		$this->load->view('auth/footer');
+    }
+
+	public function regist()
+    {
+        $tambah = $this->Model_jadwal;
+        $validation = $this->form_validation;
+        $validation->set_rules($tambah->rules());
+
+        if ($validation->run()) {
+            $tambah->save();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        } else {
+            $this->session->set_flashdata('Gagal', 'Tidak Berhasil disimpan');
+        }
+        $data["kelas"] = $this->Model_kelas->getAll();
+        $data["jurusan"] = $this->Model_jurusan->getAll();
+        $data["jadwal"] = $this->Model_jadwal->getAll();
+        $this->load->view('template_admin/header');
+        $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/jadwal', $data);
+        $this->load->view('template_admin/footer');
+        
+    }
+
 	public function login_admin()
 	{
 		$this->form_validation->set_rules('username', 'Username Admin', 'required');

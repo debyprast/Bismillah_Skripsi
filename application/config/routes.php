@@ -59,6 +59,7 @@ $route['default_controller'] = 'admin';
 $route['login']         =   'auth/user'; // ACCESS URL LOGIN SISWA AS DEFAULT
 $route['loginuser']    =   'auth/user'; // 
 $route['loginadmin']    =   'auth/admin'; // ACCESS URL LOGIN ADMIN
+$route['register']    =   'auth/register'; 
 // =======================================================================
 
 // URL LOGOUT
@@ -68,6 +69,7 @@ $route['logout']                =   'auth/logout';
 $route['authorization'] =   'auth/login_admin';
 $route['authuser']     =   'auth/login_user';
 $route['authguru']      =   'auth/login_guru';
+$route['register']		= 	'auth/register';
 //=====================================================
 
 $route['404_override'] = '';

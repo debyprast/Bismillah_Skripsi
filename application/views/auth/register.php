@@ -14,7 +14,7 @@
                             <div class="col-lg">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h2 text-gray-900 mb-4"><i class="fas fa-users"></i> TAMBAH ADMIN </h1>
+                                        <h1 class="h2 text-gray-900 mb-4"><i class="fas fa-users"></i> Daftar Menjadi User </h1>
                                     </div>
                                     <form class="user" method="post" action="<?= base_url('register'); ?>">
 
@@ -22,10 +22,10 @@
                                             <input type="text" class="form-control form-control-user" id="username" placeholder="Username" name="username" value="<?= set_value('username'); ?>">
                                             <?= form_error('username', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
-                                        <div class="form-group">
+                                        <!-- <div class="form-group">
                                             <input type="email" class="form-control form-control-user" id="email" placeholder="Email Address" name="email" value="<?= set_value('email'); ?>">
                                             <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
-                                        </div>
+                                        </div> -->
                                         <div class="form-group row">
                                             <div class="col-sm-6 mb-3 mb-sm-0">
                                                 <input type="password" class="form-control form-control-user" id="password1" name="password1" placeholder="Password">
@@ -41,8 +41,7 @@
                                         </button>
                                     </form>
                                     <div class="text-center mt-3">
-                                        <a class="small" href="<?= base_url('login') ?>">Login ?</a> or
-                                        <a class="small" href="<?= base_url(); ?>">Back Home</a>
+                                        <a class="small" href="<?= base_url('loginuser'); ?>">Kembali</a>
                                     </div>
                                 </div>
                             </div>
