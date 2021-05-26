@@ -29,7 +29,8 @@
                                     </form>
                                     <div class="text-center">
                                         <a class="small" href="<?= base_url('loginadmin') ?>" style="text-decoration:none;"><i class="fas fa-user fa-fw"></i> Login Admin</a> | 
-                                        <a class="small" href="<?= base_url('register') ?>" style="text-decoration:none;"><i class="fas fa-home fa-fw"></i>Register</a>
+                                        <a class="small" href="<?= base_url('register') ?>" style="text-decoration:none;"><i class="fas fa-home fa-fw"></i>Register</a> |
+										<a class="small" href="<?= base_url('home') ?>" style="text-decoration:none;"><i class="fas fa-home fa-fw"></i>Halaman Utama</a>
                                     </div>
                                 </div>
                             </div>

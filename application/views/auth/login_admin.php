@@ -29,7 +29,8 @@
                                         <hr>
                                     </form>
                                     <div class="text-center">
-                                    <a class="small" href="<?= base_url('loginuser') ?>" style="text-decoration:none;"><i class="fas fa-user fa-fw"></i> Login User</a>
+                                    <a class="small" href="<?= base_url('loginuser') ?>" style="text-decoration:none;"><i class="fas fa-user fa-fw"></i> Login User</a> |
+									<a class="small" href="<?= base_url('home') ?>" style="text-decoration:none;"><i class="fas fa-home fa-fw"></i>Halaman Utama</a>
                                         <!-- <a class="small" href="<?= base_url() ?>" style="text-decoration:none;"><i class="fas fa-home fa-fw"></i> Dashboard</a> -->
                                     </div>
                                 </div>

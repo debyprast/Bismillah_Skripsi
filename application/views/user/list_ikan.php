@@ -7,7 +7,7 @@
    <div class="col-md-3">
     <form action="" id="FormLaporan">
      <select name="" id="dataikan" class="form-control">
-      <option value="0">Show All</option>
+      <option>Pilih Ikan</option>
       <?php foreach ($dataikan as $row): ?>
        <option value="<?php echo $row->idikan ?>"><?php echo $row->ikan ?></option>
       <?php endforeach ?>

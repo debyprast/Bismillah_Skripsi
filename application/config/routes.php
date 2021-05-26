@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 
-$route['default_controller'] = 'admin';
+$route['default_controller'] = 'home';
 /* WAJIB BACA !!!
 =======
 // $route['namaroute'] = 'NAMAFOLDER/NAMACONTROLLER/NAMAMETHOD */
