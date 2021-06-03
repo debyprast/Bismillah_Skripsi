@@ -13,8 +13,6 @@ class Importgejala extends CI_Controller
         $this->load->model('Gejala_model');
     }
 
-
-
     public function index()
     {
 		$data['title'] = 'Export Import';
@@ -22,7 +20,7 @@ class Importgejala extends CI_Controller
         
 		$this->load->view('template_admin/header');
 		$this->load->view('template_admin/sidebar');
-		$this->load->view('admin/data_ikan', $data);
+		$this->load->view('admin/data_gejala', $data);
 		$this->load->view('template_admin/footer');
     }
 
@@ -44,8 +42,7 @@ class Importgejala extends CI_Controller
                     if ($numRow > 1) {
                         $datagejala = array(
                             'ikan'  => $row->getCellAtIndex(1),
-                            'penyakit'  => $row->getCellAtIndex(2),
-							'ikan_id'  => $row->getCellAtIndex(3),
+                            'gejala'  => $row->getCellAtIndex(2),
                             'date_created' => time(),
                             'date_modified' => time(),
                         );

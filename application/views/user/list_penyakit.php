@@ -12,9 +12,9 @@
 											<?php $i = 1; foreach ($dataikan as $key){?>
 												<div class="custom-control custom-checkbox">
 													<td>
-													<input type="checkbox" name="ikan[]" value="<?php echo $key->penyakit;?>">
+													<input type="checkbox" name="ikan[]" value="<?php echo $key->gejala;?>">
 													</td>
-													<td><?php echo $key->penyakit; ?></td>
+													<td><?php echo $key->gejala; ?></td>
 													</label>
                         </div>
 											<?php $i++; }?>

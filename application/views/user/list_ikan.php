@@ -1,15 +1,15 @@
 <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Pilih ikan yang akan di analisa</h3>
-              </div>
-							<div class="container">
+	<div class="card-header">
+		<h3 class="card-title">Pilih ikan yang akan di analisa</h3>
+	</div>
+	<div class="container">
   <div class="row">
    <div class="col-md-3">
     <form action="" id="FormLaporan">
      <select name="" id="dataikan" class="form-control">
       <option>Pilih Ikan</option>
       <?php foreach ($dataikan as $row): ?>
-       <option value="<?php echo $row->idikan ?>"><?php echo $row->ikan ?></option>
+       <option value="<?php echo $row->id_ikan ?>"><?php echo $row->ikan ?></option>
       <?php endforeach ?>
      </select>
      <br>

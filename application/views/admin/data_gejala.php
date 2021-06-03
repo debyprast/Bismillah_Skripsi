@@ -31,8 +31,7 @@
                                 <tr>
                                     <th scope="col">No</th>
                                     <th scope="col">Jenis Ikan</th>
-                                    <th scope="col">Jenis Penyakit</th>
-                                    <th scope="col">Kode Ikan </th>
+                                    <th scope="col">Jenis Gejala</th>
                                     <th scope="col">Tanggal Input </th>
                                     <th scope="col">Aksi</th>
                                 </tr>
@@ -42,8 +41,7 @@
                                     <tr>
                                         <td><?= $i++; ?></td>
                                         <td><?= $gejala['ikan']; ?></td>
-                                        <td><?= $gejala['penyakit']; ?></td>
-										<td><?= $gejala['idikan']; ?></td>
+                                        <td><?= $gejala['gejala']; ?></td>
                                         <td><?= date('d F Y', $gejala['date_created']);  ?></td>
 										<td>
 										<button class="btn btn-primary margin" type="button">Edit</button>
@@ -54,6 +52,5 @@
 						</tbody>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
+
+	

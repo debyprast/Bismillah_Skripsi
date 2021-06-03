@@ -9,6 +9,7 @@ class Admin extends CI_Controller {
         $this->load->helper(array('form', 'url'));
         $this->load->model('Penyakit_model');
 		$this->load->model('Gejala_model');
+		$this->load->model('Ikan_model');
 		$this->load->library('form_validation');
 		
         if (!($this->session->userdata('username'))) {

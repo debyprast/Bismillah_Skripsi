@@ -18,10 +18,10 @@ class Filter extends CI_Controller {
 	   }
 	   else
 	   {
-		$data = $this->db->get_where('gejala', ['idikan'=>$id])->result();
+		$data = $this->db->get_where('gejala', ['id_ikan'=>$id])->result();
 	   }
 	   $dt['test'] = $data;
-	   $dt['idikan'] = $id;
+	   $dt['id_ikan'] = $id;
 	   $this->load->view('user/tampil', $dt);
  }
 }

@@ -13,8 +13,6 @@ class Importpenyakit extends CI_Controller
         $this->load->model('Penyakit_model');
     }
 
-
-
     public function index()
     {
 		$data['title'] = 'Export Import';

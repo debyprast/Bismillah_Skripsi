@@ -6,13 +6,13 @@
 	<?php $i = 1; foreach ($test as $row):?>
 		<div class="custom-control custom-checkbox">
 			<td>
-				<input type="checkbox"  value="<?php echo $row->penyakit;?>">
+				<input type="checkbox"  value="<?php echo $row->gejala;?>">
 			</td>
 			<td>
-				<?php echo $row->penyakit; ?>
+				<?php echo $row->gejala; ?>
 			</td>
 			
 		</div>
 	<?php endforeach ?>
-	<a href="<?= site_url('Cetak_Filter/cetak/'. $idikan) ?>" target="_blank" class="btn btn-warning">Analisa</a>
+	<a href="<?= site_url('Cetak_Filter/cetak/'. $id_ikan) ?>" target="_blank" class="btn btn-warning">Analisa</a>
 </div>
