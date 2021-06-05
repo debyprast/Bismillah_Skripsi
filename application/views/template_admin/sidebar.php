@@ -241,6 +241,12 @@
                 </a>
               </li>
 							<li class="nav-item">
+                <li class="active"><a href="<?= base_url(); ?>Admin/keputusan" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Keputusan</p>
+                </a>
+              </li>
+							<li class="nav-item">
 								<li class="active"><a href="<?= base_url(); ?>Admin/datagejalapenyakit" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Data Gejala Penyakit</p>

@@ -29,7 +29,7 @@
 			e.preventDefault();
 			var id = $("#dataikan").val();
 			// console.log(id);
-			var url = "<?= site_url('Filter/filter/') ?>" + id;
+			var url = "<?= site_url('Filter/filterug/') ?>" + id;
 			$('#tampil').load(url);
 		})
 		});

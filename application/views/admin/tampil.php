@@ -14,6 +14,5 @@
 			
 		</div>
 	<?php endforeach ?>
-	<a href="<?= site_url('Proses/proses/') ?>" target="_blank" class="btn btn-warning">Analisa</a>
-</div>
+	</div>
 
