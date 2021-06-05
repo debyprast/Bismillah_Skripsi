@@ -14,5 +14,5 @@
 			
 		</div>
 	<?php endforeach ?>
-	<a href="<?= site_url('Cetak_Filter/cetak/'. $id_ikan) ?>" target="_blank" class="btn btn-warning">Analisa</a>
+	<a href="<?= site_url('Proses/proses/') ?>" target="_blank" class="btn btn-warning">Analisa</a>
 </div>

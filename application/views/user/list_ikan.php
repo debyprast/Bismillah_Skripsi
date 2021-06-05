@@ -5,7 +5,7 @@
 	<div class="container">
   <div class="row">
    <div class="col-md-3">
-    <form action="" id="FormLaporan">
+    <form action="" id="FormList">
      <select name="" id="dataikan" class="form-control">
       <option>Pilih Ikan</option>
       <?php foreach ($dataikan as $row): ?>
@@ -25,7 +25,7 @@
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
 		$(document).ready(function() {
-		$("#FormLaporan").submit(function(e) {
+		$("#FormList").submit(function(e) {
 			e.preventDefault();
 			var id = $("#dataikan").val();
 			// console.log(id);

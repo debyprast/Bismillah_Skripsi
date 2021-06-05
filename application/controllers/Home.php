@@ -33,29 +33,5 @@ class Home extends CI_Controller {
 		$this->load->view('template_user/sidebar');
 		$this->load->view('user/list_ikan', $data);
 		$this->load->view('template_user/footer');
-    }
-
-	// public function hasilarwana(){
-	// 	$this->load->view('template_user/header');
-	// 	$this->load->view('template_user/sidebar');
-	// 	$this->load->view('user/ikan_arwana');
-	// 	$this->load->view('template_user/footer');
-    // }
-
-	// public function hasilcupang(){
-	// 	$this->load->view('template_user/header');
-	// 	$this->load->view('template_user/sidebar');
-	// 	$this->load->view('user/ikan_cupang');
-	// 	$this->load->view('template_user/footer');
-    // }
-
-	// public function hasilkoi(){
-	// 	$this->load->view('template_user/header');
-	// 	$this->load->view('template_user/sidebar');
-	// 	$this->load->view('user/ikan_koi');
-	// 	$this->load->view('template_user/footer');
-    // }
-
-
-	
+    }	
 }

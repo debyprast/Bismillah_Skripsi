@@ -10,6 +10,7 @@ class Admin extends CI_Controller {
         $this->load->model('Penyakit_model');
 		$this->load->model('Gejala_model');
 		$this->load->model('Ikan_model');
+		$this->load->model('Hasil_model');
 		$this->load->library('form_validation');
 		
         if (!($this->session->userdata('username'))) {
@@ -72,9 +73,10 @@ class Admin extends CI_Controller {
     }
 
 	public function datagejalapenyakit(){
+		$data['datahasil'] = $this->Hasil_model->getDataHasil();
 		$this->load->view('template_admin/header');
 		$this->load->view('template_admin/sidebar');
-		$this->load->view('admin/data_gejalapenyakit');
+		$this->load->view('admin/data_gejalapenyakit',$data);
 		$this->load->view('template_admin/footer');
     }
 }
