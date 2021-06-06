@@ -35,12 +35,66 @@ class Admin extends CI_Controller {
     }
 
 	public function tambahpenyakit(){
+		$data['dataikan'] = $this->Ikan_model->ikan();
 		$data['datapenyakit'] = $this->Penyakit_model->getDataPenyakit();
 		$this->load->view('template_admin/header');
 		$this->load->view('template_admin/sidebar');
 		$this->load->view('admin/tambah_penyakit', $data);
 		$this->load->view('template_admin/footer');
     }
+
+	public function tambahpenyakit1()
+    {
+        $tambah = $this->Penyakit_model;
+        $validation = $this->form_validation;
+        $validation->set_rules($tambah->rules());
+
+        if ($validation->run()) {
+            $tambah->save();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
+        
+		$data['datapenyakit'] = $this->Penyakit_model->getDataPenyakit();
+        $data['dataikan'] = $this->Ikan_model->ikan();
+        $this->load->view('template_admin/header');
+        $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/data_penyakit', $data);
+        $this->load->view('template_admin/footer');
+        
+    }
+
+	public function deletepenyakit($id_penyakit=null)
+    {
+        if (!isset($id_penyakit)) show_404();
+        
+        if ($this->Penyakit_model->delete($id_penyakit)) {
+			$data['datapenyakit'] = $this->Penyakit_model->getDataPenyakit();
+			$data['dataikan'] = $this->Ikan_model->ikan();
+            $this->load->view('template_admin/header');
+            $this->load->view('template_admin/sidebar');
+            $this->load->view('admin/data_penyakit', $data);
+            $this->load->view('template_admin/footer');
+        }
+	}
+
+	public function editpenyakit($id_penyakit=null)
+    {
+        $var = $this->Penyakit_model;
+        $validation = $this->form_validation;
+        $validation->set_rules($var->rules());
+
+        if ($validation->run()) {
+            $var->update();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
+			$data['dataikan'] = $this->Ikan_model->ikan();
+			$data["penyakit"] = $var->getById($id_penyakit);
+			if (!$data["penyakit"]) show_404();
+        $this->load->view("template_admin/header");
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("admin/edit_penyakit", $data);
+        $this->load->view("template_admin/footer");
+	}
 
 	public function tambahgejala(){
 		$this->load->view('template_admin/header');

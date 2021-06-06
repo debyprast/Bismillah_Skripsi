@@ -1,4 +1,4 @@
-<form action="<?php echo base_url(). 'Admin/tambahpenyakit1'; ?>" method="post" enctype="multipart/form-data" >			
+<form action="<?php echo base_url("Admin/editpenyakit/$penyakit->id_penyakit")?>" method="post" enctype="multipart/form-data" >	
 	<div class="form-group">
 		<label for="ikanp">pilih id ikan</label>
 			<select class="form-control" name="ikanp">
