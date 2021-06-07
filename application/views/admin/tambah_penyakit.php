@@ -1,4 +1,9 @@
-<form action="<?php echo base_url(). 'Admin/tambahpenyakit1'; ?>" method="post" enctype="multipart/form-data" >			
+<div class="container">
+		<div class="row mt-2">
+			<div class="col-12">
+				<div class="card">
+					<div class="card-body">
+						<form action="<?php echo base_url(). 'Admin/tambahpenyakit1'; ?>" method="post" enctype="multipart/form-data" >			
 	<div class="form-group">
 		<label for="ikanp">Pilih Ikan</label>
 			<select class="form-control" name="ikanp">
@@ -29,5 +34,8 @@
 				<button type="submit" class="btn btn-primary">Simpan</button>
 				<button type="reset" class="btn btn-danger">Reset</button>
 		</form>
+					</div>
+				</div>
+			</div>
 
 	

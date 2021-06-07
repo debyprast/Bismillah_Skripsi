@@ -1,4 +1,9 @@
-<form action="<?php echo base_url(). 'Admin/tambahikan1'; ?>" method="post" enctype="multipart/form-data" >			
+<div class="container">
+		<div class="row mt-2">
+			<div class="col-12">
+				<div class="card">
+					<div class="card-body">
+						<form action="<?php echo base_url(). 'Admin/tambahikan1'; ?>" method="post" enctype="multipart/form-data" >			
 	<div class="form-group">
 
 	<div class="form-group">
@@ -12,4 +17,7 @@
 		<button type="reset" class="btn btn-danger">Reset</button>
 </form>
 
-	
+					</div>
+				</div>
+			</div>
+
