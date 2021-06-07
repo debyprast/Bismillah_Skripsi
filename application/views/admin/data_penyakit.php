@@ -36,15 +36,15 @@
 				</tr>
 				<tbody>
 					<?php $i = 1;
-					foreach ($datapenyakit as $barang) : ?>
+					foreach ($datapenyakit as $penyakit) : ?>
 						<tr>
 							<td><?= $i++; ?></td>
-							<td><?= $barang['ikanp']; ?></td>
-							<td><?= $barang['penyakitp']; ?></td>
-							<td><?= date('d F Y', $barang['date_created']);  ?></td>
+							<td><?= $penyakit['ikanp']; ?></td>
+							<td><?= $penyakit['penyakitp']; ?></td>
+							<td><?= date('d F Y', $penyakit['date_created']);  ?></td>
 							<td>
-							<?php echo anchor('Admin/editpenyakit/'.$barang['id_penyakit'],'<button class="btn btn-primary margin" type="button"><span class="fa fa-pencil"></span> Edit </button>'); ?>
-							<?php echo anchor('Admin/deletepenyakit/'.$barang['id_penyakit'],'<button class="btn btn-danger margin" type="button"><span class="fa fa-trash"></span> </button>'); ?>	
+							<?php echo anchor('Admin/editpenyakit/'.$penyakit['id_penyakit'],'<button class="btn btn-primary margin" type="button"><span class="fa fa-pencil"></span> Edit </button>'); ?>
+							<?php echo anchor('Admin/deletepenyakit/'.$penyakit['id_penyakit'],'<button class="btn btn-danger margin" type="button"><span class="fa fa-trash"></span> </button>'); ?>	
 						</td>
 						</tr> 
 					<?php endforeach; ?> 
