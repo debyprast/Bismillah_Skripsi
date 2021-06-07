@@ -27,13 +27,6 @@ class Admin extends CI_Controller {
 		$this->load->view('template_admin/footer');
     }
 
-	public function tambahikan(){
-		$this->load->view('template_admin/header');
-		$this->load->view('template_admin/sidebar');
-		$this->load->view('admin/tambah_ikan');
-		$this->load->view('template_admin/footer');
-    }
-
 	public function tambahpenyakit(){
 		$data['dataikan'] = $this->Ikan_model->ikan();
 		$data['datapenyakit'] = $this->Penyakit_model->getDataPenyakit();
@@ -159,11 +152,71 @@ class Admin extends CI_Controller {
 	}
 
 	public function dataikan(){
+		$data['dataikan'] = $this->Ikan_model->getDataIkan();
 		$this->load->view('template_admin/header');
 		$this->load->view('template_admin/sidebar');
-		$this->load->view('admin/data_ikan');
+		$this->load->view('admin/data_ikan', $data);
 		$this->load->view('template_admin/footer');
     }
+
+	public function tambahikan(){
+		$data['datapenyakit'] = $this->Ikan_model->getDataIkan();
+		$this->load->view('template_admin/header');
+		$this->load->view('template_admin/sidebar');
+		$this->load->view('admin/tambah_ikan', $data);
+		$this->load->view('template_admin/footer');
+    }
+
+	public function tambahikan1()
+    {
+        $tambah = $this->Ikan_model;
+        $validation = $this->form_validation;
+        $validation->set_rules($tambah->rules());
+
+        if ($validation->run()) {
+            $tambah->save();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
+        $data['dataikan'] = $this->Ikan_model->getDataIkan();
+        $this->load->view('template_admin/header');
+        $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/data_ikan', $data);
+        $this->load->view('template_admin/footer');
+        
+    }
+
+	public function deleteikan($id_ikan=null)
+    {
+        if (!isset($id_ikan)) show_404();
+        
+        if ($this->Ikan_model->delete($id_ikan)) {
+			$data['dataikan'] = $this->Ikan_model->getDataIkan();
+            $this->load->view('template_admin/header');
+            $this->load->view('template_admin/sidebar');
+            $this->load->view('admin/data_ikan', $data);
+            $this->load->view('template_admin/footer');
+        }
+	}
+
+	public function editikan($id_ikan=null)
+    {
+        $var = $this->Ikan_model;
+        $validation = $this->form_validation;
+        $validation->set_rules($var->rules());
+
+        if ($validation->run()) {
+            $var->update();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
+			$data['dataikan'] = $this->Ikan_model->ikan();
+			$data["ikan"] = $var->getById($id_ikan);
+			if (!$data["ikan"]) show_404();
+        $this->load->view("template_admin/header");
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("admin/edit_ikan", $data);
+        $this->load->view("template_admin/footer");
+	}
+
 
 	public function datapenyakit(){
 		$data['datapenyakit'] = $this->Penyakit_model->getDataPenyakit();

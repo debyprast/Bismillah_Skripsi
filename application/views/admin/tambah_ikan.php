@@ -1,20 +1,15 @@
-<div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">Tambah Ikan</h3>
-              </div>
-              <!-- /.card-header -->
-              <!-- form start -->
-              <form>
-                <div class="card-body">
-									<div class="form-group">
-                    <label for="exampleInputEmail1">Jenis ikan</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Jenis ikan">
-                  </div>
-                </div>
-                <!-- /.card-body -->
+<form action="<?php echo base_url(). 'Admin/tambahikan1'; ?>" method="post" enctype="multipart/form-data" >			
+	<div class="form-group">
 
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-              </form>
-            </div>
+	<div class="form-group">
+		<label for="ikan">Nama Ikan</label>
+			<input class="form-control <?php echo form_error('ikan') ? 'is-invalid':'' ?>" type="text" name="ikan" placeholder="Nama Ikan" />
+				<div class="invalid-feedback">
+					<?php echo form_error('ikan') ?>
+				</div>
+	</div>
+		<button type="submit" class="btn btn-primary">Simpan</button>
+		<button type="reset" class="btn btn-danger">Reset</button>
+</form>
+
+	

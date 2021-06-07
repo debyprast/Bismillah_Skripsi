@@ -222,22 +222,22 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <!-- <li class="nav-item">
+              <li class="nav-item">
 							<li class="active"><a href="<?= base_url(); ?>Admin/dataikan" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Data Ikan</p>
                 </a>
-              </li> -->
+              </li>
+							<li class="nav-item">
+                <li class="active"><a href="<?= base_url(); ?>Admin/datagejala" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Data gejala</p>
+                </a>
+              </li>
               <li class="nav-item">
 							<li class="active"><a href="<?= base_url(); ?>Admin/datapenyakit" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Data Penyakit</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <li class="active"><a href="<?= base_url(); ?>Admin/datagejala" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Data gejala</p>
                 </a>
               </li>
 							<li class="nav-item">

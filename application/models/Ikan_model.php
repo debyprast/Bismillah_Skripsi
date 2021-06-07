@@ -3,7 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Ikan_model extends CI_Model
 {
-	private $_table = "dataikan";
+	private $_table = "ikan";
     public $id_ikan, $ikan;
 
     public function rules()
@@ -15,6 +15,19 @@ class Ikan_model extends CI_Model
                 'rules' => 'required'
             ]
         ];
+    }
+
+	public function import_data($dataikan)
+    {
+		$jumlah = count($dataikan);
+		if ($jumlah > 0){
+			$this->db->replace('gejala', $dataikan);
+		}
+    }
+
+	public function getDataIkan()
+    {
+        return $this->db->get('ikan')->result_array();
     }
 
     public function getAll()

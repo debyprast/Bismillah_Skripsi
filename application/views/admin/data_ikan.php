@@ -3,7 +3,12 @@
 			<div class="col-12">
 				<div class="card">
 					<div class="card-body">
-						<?= form_open_multipart('Importpenyakit/uploaddata')?>
+						<div class="col">
+							<form method="post"  action="<?php  echo base_url(). "admin/tambahikan"; ?>">
+								<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Ikan</button>
+							</form>
+						</div>
+						<?= form_open_multipart('Importikan/uploaddata')?>
 							<div class="form-row">
 								<div class="col-4">
 								<input type="file" class="form-control-file" id="importexcel" name="importexcel" accept=".xls, .xlsx">
@@ -25,18 +30,18 @@
                                 <tr>
                                     <th scope="col">No</th>
                                     <th scope="col">Jenis Ikan</th>
-                                    <th scope="col">Jenis Penyakit</th>
-                                    <th scope="col">Tanggal Input </th>
                                     <th scope="col">Aksi</th>
                                 </tr>
 																<tbody>
                                 <?php $i = 1;
-                                foreach ($datapenyakit as $penyakit) : ?>
+                                foreach ($dataikan as $ikan) : ?>
                                     <tr>
                                         <td><?= $i++; ?></td>
-                                        <td><?= $penyakit['ikan']; ?></td>
-                                        <td><?= $penyakit['penyakit']; ?></td>
-                                        <td><?= date('d F Y', $penyakit['date_created']);  ?></td>
+                                        <td><?= $ikan['ikan']; ?></td>
+										<td>
+										<?php echo anchor('Admin/editikan/'.$ikan['id_ikan'],'<button class="btn btn-primary margin" type="button"><span class="fa fa-pencil"></span> Edit </button>'); ?>
+							<?php echo anchor('Admin/deleteikan/'.$ikan['id_ikan'],'<button class="btn btn-danger margin" type="button"><span class="fa fa-trash"></span> </button>'); ?>	
+										</td>
                                         </tr> <?php endforeach; ?> </tbody>
 			</div>
 		</div>
