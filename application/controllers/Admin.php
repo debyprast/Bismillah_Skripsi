@@ -97,11 +97,66 @@ class Admin extends CI_Controller {
 	}
 
 	public function tambahgejala(){
+		$data['dataikan'] = $this->Ikan_model->ikan();
+		$data['datapenyakit'] = $this->Gejala_model->getDataGejala();
 		$this->load->view('template_admin/header');
 		$this->load->view('template_admin/sidebar');
-		$this->load->view('admin/tambah_gejala');
+		$this->load->view('admin/tambah_gejala', $data);
 		$this->load->view('template_admin/footer');
     }
+
+	public function tambahgejala1()
+    {
+        $tambah = $this->Gejala_model;
+        $validation = $this->form_validation;
+        $validation->set_rules($tambah->rules());
+
+        if ($validation->run()) {
+            $tambah->save();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
+        
+		$data['datagejala'] = $this->Gejala_model->getDataGejala();
+        $data['dataikan'] = $this->Ikan_model->ikan();
+        $this->load->view('template_admin/header');
+        $this->load->view('template_admin/sidebar');
+        $this->load->view('admin/data_gejala', $data);
+        $this->load->view('template_admin/footer');
+        
+    }
+
+	public function deletegejala($id_gejala=null)
+    {
+        if (!isset($id_gejala)) show_404();
+        
+        if ($this->Gejala_model->delete($id_gejala)) {
+			$data['datagejala'] = $this->Gejala_model->getDataGejala();
+			$data['dataikan'] = $this->Ikan_model->ikan();
+            $this->load->view('template_admin/header');
+            $this->load->view('template_admin/sidebar');
+            $this->load->view('admin/data_gejala', $data);
+            $this->load->view('template_admin/footer');
+        }
+	}
+
+	public function editgejala($id_gejala=null)
+    {
+        $var = $this->Gejala_model;
+        $validation = $this->form_validation;
+        $validation->set_rules($var->rules());
+
+        if ($validation->run()) {
+            $var->update();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
+			$data['dataikan'] = $this->Ikan_model->ikan();
+			$data["gejala"] = $var->getById($id_gejala);
+			if (!$data["gejala"]) show_404();
+        $this->load->view("template_admin/header");
+        $this->load->view("template_admin/sidebar");
+        $this->load->view("admin/edit_gejala", $data);
+        $this->load->view("template_admin/footer");
+	}
 
 	public function dataikan(){
 		$this->load->view('template_admin/header');

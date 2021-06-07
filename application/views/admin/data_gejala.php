@@ -44,8 +44,8 @@
                                         <td><?= $gejala['gejala']; ?></td>
                                         <td><?= date('d F Y', $gejala['date_created']);  ?></td>
 										<td>
-										<button class="btn btn-primary margin" type="button">Edit</button>
-										<button class="btn btn-danger margin" type="button"><span class="fa fa-trash"></span> </button>
+										<?php echo anchor('Admin/editgejala/'.$gejala['id_gejala'],'<button class="btn btn-primary margin" type="button"><span class="fa fa-pencil"></span> Edit </button>'); ?>
+							<?php echo anchor('Admin/deletegejala/'.$gejala['id_gejala'],'<button class="btn btn-danger margin" type="button"><span class="fa fa-trash"></span> </button>'); ?>	
 										</td>
                                     </tr> 
 								<?php endforeach; ?> 

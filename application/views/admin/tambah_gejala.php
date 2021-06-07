@@ -1,36 +1,33 @@
-<div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">Tambah Gejala</h3>
-              </div>
-              <!-- /.card-header -->
-              <!-- form start -->
-              <form>
-                <div class="card-body">
-								<div class="form-group">
-                        <label>Select</label>
-                        <select class="form-control">
-                          <option>Arwana</option>
-                          <option>Cupang</option>
-                          <option>Koi</option>
-                        </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Gejala</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Gejala">
-                  </div>
-									<div class="form-group">
-                        <label>ID Ikan</label>
-                        <select class="form-control">
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                        </select>
-                  </div>
-                </div>
-                <!-- /.card-body -->
+<form action="<?php echo base_url(). 'Admin/tambahgejala1'; ?>" method="post" enctype="multipart/form-data" >			
+	<div class="form-group">
+		<label for="ikan">pilih id ikan</label>
+			<select class="form-control" name="ikan">
+				<option disabled selected >Pilih kan</option>
+					<?php foreach($dataikan as $row):?>
+						<option value="<?= $row->ikan?>"><?= $row->ikan?></option>
+					<?php endforeach; ?>
+			</select>
+	</div>
+	
+	<div class="form-group">
+		<label for="gejala">Nama gejala</label>
+			<input class="form-control <?php echo form_error('gejala') ? 'is-invalid':'' ?>" type="text" name="gejala" placeholder="Nama Kelas" />
+				<div class="invalid-feedback">
+					<?php echo form_error('gejala') ?>
+				</div>
+	</div>
+	<div class="form-group">
+		<label for="id_ikan">pilih id ikan</label>
+			<select class="form-control" name="id_ikan">
+				<option disabled selected >Pilih kan</option>
+					<?php foreach($dataikan as $row):?>
+					<option value="<?= $row->id_ikan?>"><?= $row->id_ikan?></option>
+					<?php endforeach; ?>
+			</select>
+	</div>
 
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-              </form>
-            </div>
+				<button type="submit" class="btn btn-primary">Simpan</button>
+				<button type="reset" class="btn btn-danger">Reset</button>
+		</form>
+
+	
