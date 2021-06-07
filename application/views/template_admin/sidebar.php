@@ -257,6 +257,7 @@
 					</li>
 					</li>
 					<li class="nav-item">
+					<li class="nav-link"><a href="<?= base_url(); ?>Admin/datauser" ><em class="fa fa-user">&nbsp;</em> User</a></li>
 					<li class="nav-link"><a href="<?= base_url('logout'); ?>"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
 					</li>
 

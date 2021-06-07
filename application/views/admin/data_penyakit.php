@@ -30,7 +30,7 @@
 				<tr>
 					<th scope="col">No</th>
 					<th scope="col">Jenis Ikan</th>
-					<th scope="col">Nama Penyakit</th>
+					<th scope="col">Jenis Penyakit</th>
 					<th scope="col">Tanggal Input </th>
 					<th scope="col">Aksi</th>
 				</tr>
