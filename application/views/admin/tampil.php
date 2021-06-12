@@ -8,9 +8,7 @@
 			<td>
 				<input type="checkbox"  value="<?php echo $row->gejala;?>">
 			</td>
-			<td>
-				<?php echo $row->gejala; ?>
-			</td>
+			<td><?php echo $row->gejala; ?></td>
 			
 		</div>
 	<?php endforeach ?>

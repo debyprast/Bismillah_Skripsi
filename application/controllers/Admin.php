@@ -13,6 +13,7 @@ class Admin extends CI_Controller {
 		$this->load->model('Ikan_model');
 		$this->load->model('User_model');
 		$this->load->model('Hasil_model');
+		$this->load->model('Keputusan_model');
 		
         if (!($this->session->userdata('username'))) {
             redirect(base_url('loginadmin'));
@@ -236,7 +237,7 @@ class Admin extends CI_Controller {
     }
 
 	public function datagejalapenyakit(){
-		$data['datahasil'] = $this->Hasil_model->getDataHasil();
+		$data['datahasil'] = $this->Keputusan_model->getDataHasil();
 		$this->load->view('template_admin/header');
 		$this->load->view('template_admin/sidebar');
 		$this->load->view('admin/data_gejalapenyakit',$data);
@@ -250,6 +251,7 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/data_user', $data);
 		$this->load->view('template_admin/footer');
     }
+
 	public function keputusan(){
 		$data['dataikan'] = $this->Ikan_model->ikan();
 		$this->load->view('template_admin/header');

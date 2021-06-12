@@ -9,7 +9,6 @@ class Home extends CI_Controller {
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
 		$this->load->model('Ikan_model');
-		$this->load->model('Ikan_model');
     }
 
 	public function index(){
