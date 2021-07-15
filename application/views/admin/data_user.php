@@ -5,7 +5,7 @@
 					<div class="card-body">
 						<div class="col">
 							<form method="post"  action="<?php  echo base_url(). "admin/tambahikan"; ?>">
-								<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah Ikan</button>
+								<button class="btn btn-primary" id="submit-buttons" type="submit" ​​​​​>Tambah User</button>
 							</form>
 						</div>
 					

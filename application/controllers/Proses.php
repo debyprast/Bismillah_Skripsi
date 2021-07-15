@@ -13,40 +13,49 @@ class Proses extends CI_Controller {
 		
     }
 
- public function proses($tampil)
- {
-	if ($tampil) {
-		$query = $this->db->query("SELECT id_penyakit, count(*) as jumlah from gejala_penyakit where id_ikan = 1
-		 and id_gejala in (855) group by id_penyakit");
-		return $query->result();
+    
+   
+	public function save()
+	{
+		// $post = $this->input->post();
+
+		// $this->penyakitp = $post('penyakitp');
+		// $ikan = $this->input->post('ikan');
+		// $data = array('ikan' => $ikan);
+		// $this->db->insert('added_data', $data);
+
+		$ikan = $this->input->post('ikan');
+		$gejala = $this->input->post('gejala');
+		$penyakitp = $this->input->post('penyakitp');
+		$data = array(
+			'ikan' => $ikan,
+			'gejala' => serialize($gejala),
+			'penyakitp' => $penyakitp
+
+		);
+		$this->Keputusan_model->insert_entry($data);
+        redirect('admin/datagejalapenyakit');
 	}
-	   elseif ($tampil)
-	   {
-		$query = $this->db->query("SELECT id_penyakit, count(*) as jumlah from gejala_penyakit where id_ikan = 1 
-		and id_penyakit = 60");
-		return $query->result();
-	   }
-	   $dt['test'] = $tampil;
-	   $this->load->view('user/tampil', $tampil);
- }
+	
 
- public function tambahkeputusan()
-    {
-        $tambah = $this->Keputusan_model;
-        $validation = $this->form_validation;
-        $validation->set_rules($tambah->rules());
+//  public function proses($tampil)
+//  {
+// 	if ($tampil) {
+// 		$query = $this->db->query("SELECT id_penyakit, count(*) as jumlah from gejala_penyakit where id_ikan = 1
+// 		 and id_gejala in (855) group by id_penyakit");
+// 		return $query->result();
+// 	}
+// 	   elseif ($tampil)
+// 	   {
+// 		$query = $this->db->query("SELECT id_penyakit, count(*) as jumlah from gejala_penyakit where id_ikan = 1 
+// 		and id_penyakit = 60");
+// 		return $query->result();
+// 	   }
+// 	   $dt['test'] = $tampil;
+// 	   $this->load->view('user/tampil', $tampil);
+//  }
 
-        if ($validation->run()) {
-            $tambah->save();
-            $this->session->set_flashdata('success', 'Berhasil disimpan');
-        }
-        $data['datahasil'] = $this->Keputusan_model->getDataHasil();
-        $this->load->view('template_admin/header');
-        $this->load->view('template_admin/sidebar');
-        $this->load->view('admin/data_gejalapenyakit', $data);
-        $this->load->view('template_admin/footer');
-        
-    }
+
 }
 
 		
